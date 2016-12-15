@@ -1,0 +1,20 @@
+<%- include("../includes/header.ejs", {title:"User Accounts"}); %>
+
+<h1>User Accounts</h1>
+
+<p>Here you can view the complete list of all the users in the database. Click an account to see more information on it. If you
+    wish to add your own account, simply click the "Create New Account" button.</p>
+<p>_______________________________________________________</p>
+
+<a href="/account/add">Create New Account</a> <br />
+<br />
+        <table border="1">
+            <tr><th> Account List </th></tr>
+            <% for(var i=0; result.length > i; i++ ) { %>
+            <tr>
+                <td> <a href="/account/?account_id=<%= result[i].account_id %>"><%= result[i].lname %>, <%= result[i].fname %></a> </td>
+            </tr>
+            <% } %>
+        </table>
+
+<%- include("../includes/footer.ejs"); %>

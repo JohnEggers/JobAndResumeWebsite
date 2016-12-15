@@ -1,0 +1,15 @@
+<%- include("../includes/header.ejs", {title:"Skill Info"}); %>
+
+<h1>Skill Info</h1>
+<p>_________________________________</p>
+<br />
+<ul>
+    <li><b>Skill ID: </b><%= result[0].skill_id %></li>
+    <li><b>Skill Name: </b><%= result[0].skill_name %></li>
+    <li><b>Description: </b><%= result[0].description %></li>
+    <li><b>User(s) with this Skill: </b><%= result[0].fname %> <%= result[0].lname %></li>
+</ul>
+<p>_________________________________</p>
+<a href="/skill/all"><< back to skill list</a>
+
+<%- include("../includes/footer.ejs"); %>

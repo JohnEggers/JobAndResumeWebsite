@@ -1,0 +1,21 @@
+<%- include("../includes/header.ejs", {title:"Skills"}); %>
+
+<h1>Skills</h1>
+
+<p>Here you can view the complete list of skills in the database. Click a skill to see more information on it. If you
+    wish to add your own skill, simply click the "Add New Skill" button.</p>
+<p>_______________________________________________________</p>
+
+        <a href="/skill/add">Add New Skill</a> <br />
+        <br />
+        <table border="1">
+            <tr><th>Skill Name</th><th>Description</th></tr>
+            <% for(var i=0; result.length > i; i++ ) { %>
+            <tr>
+                <td><a href="/skill/?skill_id=<%= result[i].skill_id %>"><%= result[i].skill_name %></a></td>
+                <td><%= result[i].description %></td>
+            </tr>
+            <% } %>
+        </table>
+
+<%- include("../includes/footer.ejs"); %>

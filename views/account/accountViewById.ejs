@@ -1,0 +1,15 @@
+<%- include("../includes/header.ejs", {title:"Account Info"}); %>
+
+<h1>Account Info</h1>
+<p>_________________________________</p>
+<br />
+<ul>
+    <li><b>First Name: </b><%= result[0].fname %></li>
+    <li><b>Last Name: </b><%= result[0].lname %></li>
+    <li><b>Account ID: </b><%= result[0].account_id%></li>
+    <li><b>Email: </b><%= result[0].email %></li>
+</ul>
+<p>_________________________________</p>
+<a href="/account/all"><< back to account list</a>
+
+<%- include("../includes/footer.ejs"); %>

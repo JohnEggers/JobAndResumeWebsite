@@ -1,0 +1,20 @@
+<%- include("../includes/header.ejs", {title:"Companies"}); %>
+
+<h1>Companies</h1>
+
+<p>Here you can view the complete list of companies in the database. Click a company to see more information on it. If you
+    wish to add your own company, simply click the "Add New Company" button.</p>
+<p>_______________________________________________________</p>
+
+<a href="/company/add">Add New Company</a> <br />
+<br />
+<table border="1">
+    <tr><th> Company List </th></tr>
+    <% for(var i=0; result.length > i; i++ ) { %>
+    <tr>
+        <td><a href="/company/?company_id=<%= result[i].company_id %>"><%= result[i].company_name %></a></td>
+    </tr>
+    <% } %>
+</table>
+
+<%- include("../includes/footer.ejs"); %>

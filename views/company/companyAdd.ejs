@@ -1,0 +1,25 @@
+<%- include("../includes/header.ejs", {title:"Add New Company"}); %>
+
+<h1>Add New Company</h1>
+<br />
+<form action="/company/insert" method="get">
+    <b>Company Name: </b><input id="company_name" name="company_name" type="text" />
+    <br />
+    <br />
+    <b>Address: </b><br />
+    &nbsp&nbsp&nbsp&nbsp&nbsp
+    <b>Street Name: </b> &nbsp&nbsp&nbsp <input id="streetname" name="streetname" type="text" /><br />
+    &nbsp&nbsp&nbsp&nbsp&nbsp
+    <b>Street Number: </b><input id="streetnum" name="streetnum" type="text" /><br />
+    &nbsp&nbsp&nbsp&nbsp&nbsp
+    <b>Zip-Code: </b> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <input id="zip" name="zip" type="text" /><br />
+    &nbsp&nbsp&nbsp&nbsp&nbsp
+    <b>City: </b> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <input id="city" name="city" type="text" /><br />
+    &nbsp&nbsp&nbsp&nbsp&nbsp
+    <b>State: </b> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <input id="state" name="state" type="text" /><br />
+
+    <br />
+    <input type="submit" />
+</form>
+
+<%- include("../includes/footer.ejs"); %>
